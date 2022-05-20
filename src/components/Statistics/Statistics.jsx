@@ -1,8 +1,7 @@
-import ProtoTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import styles from './statistics.module.css'
 
 const Statistics = ({good, neutral, bad, total, percent}) => {
-    console.log(good)
     return (
         <div className={styles.statistics}>
             <ul className={styles.list}>
@@ -37,7 +36,11 @@ const Statistics = ({good, neutral, bad, total, percent}) => {
 }
 
 Statistics.propTypes = {
-    
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    percent: PropTypes.number.isRequired,
 }
 
 export default Statistics;
