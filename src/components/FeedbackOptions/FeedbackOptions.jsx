@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import style from './feedbackOptions.module.css'
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-console.log(options)
     const element = options.map((option, index) => {
         return <li className={style.element} key={index}>
             <button
